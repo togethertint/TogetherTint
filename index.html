@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--golden:#D4AF37;--white:#FFFFFF;--black:#0F172A;--grey:#64748B;--light-grey:#1A202C}
+        :root{--sky-blue:#00A8E8;--white:#FFFFFF;--black:#000000;--grey:#64748B;--light-grey:#1A1A1A}
         body{font-family:'Poppins',sans-serif;background:var(--black);color:white;overflow-x:hidden}
         .gradient-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:var(--black)}
         .gradient-bg::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:transparent;animation:gradientMove 15s ease infinite}
@@ -19,12 +19,12 @@
         .orb-2{width:300px;height:300px;background:#718096;bottom:20%;right:10%;opacity:0.08;animation-delay:-5s}
         .orb-3{width:250px;height:250px;background:#A0AEC0;top:50%;right:30%;opacity:0.06;animation-delay:-10s}
         @keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
-        header{position:fixed;top:0;width:100%;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:var(--light-grey);backdrop-filter:none;border-bottom:3px solid var(--golden)}
-        .logo{font-size:clamp(20px,4vw,28px);font-weight:800;color:var(--black);background:var(--golden);padding:12px 28px;border-radius:8px;box-shadow:0 4px 12px rgba(212,175,55,0.4)}
+        header{position:fixed;top:0;width:100%;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:var(--light-grey);backdrop-filter:none;border-bottom:3px solid var(--sky-blue)}
+        .logo{font-size:clamp(20px,4vw,28px);font-weight:800;color:white;background:var(--sky-blue);padding:12px 28px;border-radius:8px;box-shadow:0 4px 12px rgba(0,168,232,0.4)}
         nav ul{display:flex;gap:clamp(20px,3vw,40px);list-style:none}
         nav a{color:white;text-decoration:none;font-weight:600;font-size:clamp(12px,1.5vw,14px);letter-spacing:0.5px;transition:0.3s;position:relative}
-        nav a:hover{color:var(--golden)}
-        nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--golden);transition:0.3s}
+        nav a:hover{color:var(--sky-blue)}
+        nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--sky-blue);transition:0.3s}
         nav a:hover::after{width:100%}
         .social-icons{display:flex;gap:clamp(10px,2vw,15px)}
         .social-icons a{width:clamp(38px,5vw,45px);height:clamp(38px,5vw,45px);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:clamp(16px,2vw,18px);transition:0.3s;background:var(--grey);border:none;position:relative;overflow:hidden}
@@ -37,18 +37,18 @@
         .hero-content{position:relative;z-index:1;max-width:800px}
         .hero-badge{display:inline-block;padding:12px 30px;background:var(--white);border:none;border-radius:8px;font-size:clamp(11px,1.5vw,13px);font-weight:600;color:var(--black);margin-bottom:30px;letter-spacing:1px;box-shadow:0 4px 12px rgba(255,255,255,0.3)}
         .hero-content h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:800;line-height:1.1;margin-bottom:25px;color:white}
-        .hero-content h1 span{color:var(--golden)}
+        .hero-content h1 span{color:var(--sky-blue)}
         .hero-content p{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.7);margin:0 auto 40px;line-height:1.8;font-weight:400}
-        .cta-btn{padding:clamp(16px,2vw,20px) clamp(35px,5vw,50px);font-size:clamp(13px,1.5vw,15px);font-weight:700;letter-spacing:1px;border:none;border-radius:8px;background:var(--golden);color:var(--black);cursor:pointer;transition:0.3s;text-decoration:none;display:inline-block;font-family:'Poppins',sans-serif;box-shadow:0 6px 20px rgba(212,175,55,0.4)}
-        .cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,175,55,0.6);background:#E5C158}
+        .cta-btn{padding:clamp(16px,2vw,20px) clamp(35px,5vw,50px);font-size:clamp(13px,1.5vw,15px);font-weight:700;letter-spacing:1px;border:none;border-radius:8px;background:var(--sky-blue);color:white;cursor:pointer;transition:0.3s;text-decoration:none;display:inline-block;font-family:'Poppins',sans-serif;box-shadow:0 6px 20px rgba(0,168,232,0.4)}
+        .cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,168,232,0.6);background:#00BFFF}
         .section{padding:clamp(80px,12vw,140px) 5%;position:relative}
         .section-header{text-align:center;margin-bottom:clamp(50px,8vw,80px)}
         .section-badge{display:inline-block;padding:10px 24px;background:var(--grey);border-radius:8px;font-size:clamp(10px,1.2vw,12px);font-weight:700;color:white;margin-bottom:20px;letter-spacing:2px;text-transform:uppercase;box-shadow:0 4px 12px rgba(100,116,139,0.3)}
         .section-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:white}
         .about-content{max-width:900px;margin:0 auto;text-align:center;padding:clamp(40px,6vw,60px);background:var(--light-grey);border:3px solid var(--white);border-radius:16px;backdrop-filter:none;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(255,255,255,0.1)}
-        .about-content::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--golden)}
+        .about-content::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--sky-blue)}
         .about-content p{color:rgba(255,255,255,0.8);font-size:clamp(1rem,2vw,1.15rem);line-height:2;font-weight:400}
-        .about-content strong{color:var(--golden);font-weight:700}
+        .about-content strong{color:var(--sky-blue);font-weight:700}
         .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,35px);max-width:1200px;margin:0 auto}
         .team-card{background:var(--light-grey);border:3px solid var(--grey);border-radius:16px;overflow:hidden;transition:0.3s;position:relative}
         .team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--white);opacity:0;transition:0.3s;z-index:1}
@@ -61,7 +61,7 @@
         .team-card:hover .team-img{transform:scale(1.1)}
         .team-info{padding:clamp(20px,3vw,30px);text-align:center;position:relative;z-index:1}
         .team-info h3{font-size:clamp(1.2rem,2vw,1.5rem);font-weight:700;margin-bottom:10px;color:white}
-        .team-info .role{display:inline-block;padding:8px 20px;background:var(--golden);border-radius:8px;font-size:clamp(10px,1.2vw,11px);font-weight:700;color:var(--black);letter-spacing:1px;text-transform:uppercase;margin-bottom:15px;box-shadow:0 4px 12px rgba(212,175,55,0.4)}
+        .team-info .role{display:inline-block;padding:8px 20px;background:var(--sky-blue);border-radius:8px;font-size:clamp(10px,1.2vw,11px);font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;margin-bottom:15px;box-shadow:0 4px 12px rgba(0,168,232,0.4)}
         .team-info p{color:rgba(255,255,255,0.7);font-size:clamp(0.85rem,1.4vw,0.95rem);line-height:1.7;font-weight:400}
         .events-container{max-width:900px;margin:0 auto}
         .event-card{background:var(--light-grey);border:3px solid var(--grey);border-radius:16px;padding:clamp(28px,4vw,40px);margin-bottom:20px;display:flex;align-items:center;gap:clamp(20px,4vw,30px);transition:0.3s;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(100,116,139,0.2)}
@@ -72,25 +72,25 @@
         .event-icon{width:clamp(65px,10vw,85px);height:clamp(65px,10vw,85px);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:clamp(1.5rem,3vw,2rem);flex-shrink:0;background:var(--white);border:none;box-shadow:0 4px 16px rgba(255,255,255,0.3)}
         .event-details{flex:1}
         .event-details h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;margin-bottom:8px;color:white}
-        .event-details .date{font-size:clamp(12px,1.5vw,14px);font-weight:600;color:var(--golden)}
+        .event-details .date{font-size:clamp(12px,1.5vw,14px);font-weight:600;color:var(--sky-blue)}
         .event-details p{color:rgba(255,255,255,0.7);margin-top:10px;font-size:clamp(0.85rem,1.4vw,0.95rem);font-weight:400}
-        .winner-badge{display:inline-block;padding:10px 20px;background:var(--golden);border-radius:8px;font-size:clamp(0.8rem,1.3vw,0.9rem);color:var(--black);font-weight:700;margin-top:10px;margin-right:8px;box-shadow:0 4px 16px rgba(212,175,55,0.4)}
+        .winner-badge{display:inline-block;padding:10px 20px;background:var(--sky-blue);border-radius:8px;font-size:clamp(0.8rem,1.3vw,0.9rem);color:white;font-weight:700;margin-top:10px;margin-right:8px;box-shadow:0 4px 16px rgba(0,168,232,0.4)}
         .status-badge{display:inline-block;padding:6px 14px;font-size:clamp(9px,1vw,10px);font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:8px;margin-bottom:10px}
         .status-badge.completed{background:var(--grey);color:white;border:none;box-shadow:0 3px 10px rgba(100,116,139,0.3)}
         .status-badge.upcoming{background:var(--white);color:var(--black);border:none;box-shadow:0 3px 10px rgba(255,255,255,0.3)}
         footer{padding:clamp(60px,10vw,100px) 5% clamp(30px,5vw,40px);text-align:center;position:relative}
         footer{padding:clamp(60px,10vw,100px) 5% clamp(30px,5vw,40px);text-align:center;position:relative;background:var(--light-grey);color:white}
-        footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--golden)}
-        .footer-logo{font-size:clamp(2rem,5vw,3rem);font-weight:800;color:var(--black);background:var(--golden);padding:16px 40px;display:inline-block;border-radius:12px;margin-bottom:35px;box-shadow:0 6px 20px rgba(212,175,55,0.4)}
+        footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--sky-blue)}
+        .footer-logo{font-size:clamp(2rem,5vw,3rem);font-weight:800;color:white;background:var(--sky-blue);padding:16px 40px;display:inline-block;border-radius:12px;margin-bottom:35px;box-shadow:0 6px 20px rgba(0,168,232,0.4)}
         .footer-social{display:flex;justify-content:center;gap:clamp(15px,3vw,20px);margin-bottom:40px}
         .footer-social a{width:clamp(50px,7vw,60px);height:clamp(50px,7vw,60px);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:clamp(18px,2.5vw,22px);transition:0.3s;background:var(--grey);border:none;position:relative;overflow:hidden;box-shadow:0 4px 16px rgba(100,116,139,0.3)}
         .footer-social a::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--white);opacity:0;transition:0.3s;z-index:-1}
         .footer-social a:hover{transform:translateY(-5px);border-color:transparent;box-shadow:0 10px 25px rgba(255,255,255,0.3);color:var(--black)}
         .footer-social a:hover::before{opacity:1}
         footer p{color:rgba(255,255,255,0.7);font-size:clamp(12px,1.5vw,14px)}
-        footer p span{color:var(--golden)}
+        footer p span{color:var(--sky-blue)}
         @media(max-width:992px){.team-grid{grid-template-columns:repeat(2,1fr);max-width:700px}.team-grid .team-card:last-child{grid-column:span 2;max-width:350px;margin:0 auto}}
-        @media(max-width:768px){.menu-toggle{display:flex}.social-icons{display:none}nav{position:fixed;top:0;right:-100%;width:75%;height:100vh;background:var(--light-grey);backdrop-filter:none;display:flex;align-items:center;justify-content:center;transition:0.3s;border-left:3px solid var(--golden)}nav.active{right:0}nav ul{flex-direction:column;text-align:center;gap:35px}nav a{font-size:18px;color:white}.team-grid{grid-template-columns:1fr;max-width:400px}.team-grid .team-card:last-child{grid-column:span 1;max-width:none}.event-card{flex-direction:column;text-align:center}}
+        @media(max-width:768px){.menu-toggle{display:flex}.social-icons{display:none}nav{position:fixed;top:0;right:-100%;width:75%;height:100vh;background:var(--light-grey);backdrop-filter:none;display:flex;align-items:center;justify-content:center;transition:0.3s;border-left:3px solid var(--sky-blue)}nav.active{right:0}nav ul{flex-direction:column;text-align:center;gap:35px}nav a{font-size:18px;color:white}.team-grid{grid-template-columns:1fr;max-width:400px}.team-grid .team-card:last-child{grid-column:span 1;max-width:none}.event-card{flex-direction:column;text-align:center}}
     </style>
 </head>
 <body>
